@@ -30,7 +30,13 @@ class TestGuest < MiniTest::Test
   def test_pay_entry_fee_has_enough_money
     expected = 10
     actual = @guest.balance - @room.room_entry_fee
-    assert_equal(expected,actual)
+    assert_equal(expected, actual)
+  end
+
+  def test_no_balance_for_entry_fee
+    expected = "No funds."
+    actual = @guest.no_balance_for_entry_fee
+    assert_equal(expected, actual)
   end
 
 
