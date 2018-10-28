@@ -10,7 +10,7 @@ class TestRoom < MiniTest::Test
 
   def setup
     @room1 = Room.new("Autumn", 10, 10, "Smells like teen spirit")
-    @room2 = Room.new("Summer", 20, 15, "Hit me baby one  more time")
+    @room2 = Room.new("Summer", 20, 2, "Hit me baby one  more time")
 
 
     @song1 = Song.new("Smells like teen spirit")
@@ -19,7 +19,8 @@ class TestRoom < MiniTest::Test
 
     @guest1 = Guest.new("Borna", 20)
     @guest2 = Guest.new("Aiste", 10)
-
+    @guest3 = Guest.new("Maja", 5)
+    guests = [@guest1, @guest2, @guest3]
   end
 
   def test_room_name
@@ -28,7 +29,7 @@ class TestRoom < MiniTest::Test
 
 
   def test_room_capacity
-    assert_equal(15, @room2.room_capacity)
+    assert_equal(2, @room2.room_capacity)
   end
 
   def test_room_entry_fee
@@ -52,5 +53,10 @@ class TestRoom < MiniTest::Test
     actual = @room1.check_out_guest_from_room
     assert_equal(expected,actual)
   end
-  
+
+  def test_number_of_guests_higher_than_room_capacity
+    expected = "No more space in the room."
+    actual = @room2.number_of_guests_higher_than_room_capacity
+    assert_equal(expected, actual)
+  end
 end

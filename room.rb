@@ -29,4 +29,11 @@ class Room
     return "Borna has left Room1."
   end
 
+  def number_of_guests_higher_than_room_capacity
+    guests = [@guest1, @guest2, @guest3]
+    if @capacity.to_i < guests.count
+      p "No more space in the room."
+    end
+  end
+
 end

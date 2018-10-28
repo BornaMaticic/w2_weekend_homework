@@ -8,8 +8,8 @@ class TestGuest < MiniTest::Test
 
   def setup
     @guest = Guest.new("Borna", 20)
-    @room = Room.new("Autumn", 10, 10)
-    @room2 = Room.new("Summer", 30, 10)
+    @room = Room.new("Autumn", 10, 10, "Crawling")
+    @room2 = Room.new("Summer", 30, 10, "Bye,bye,bye")
   end
 
   def test_guest_name

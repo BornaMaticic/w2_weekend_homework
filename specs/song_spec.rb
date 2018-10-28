@@ -10,8 +10,7 @@ class TestSong < MiniTest::Test
   def setup
     @song1 = Song.new("Smells like teen spirit")
     @song2 = Song.new("Hit me baby one  more time")
-    playlist = [@song1, @song2]
-  end
+     end
 
   def test_song_title
     assert_equal("Smells like teen spirit", @song1.title())
