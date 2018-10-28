@@ -39,5 +39,10 @@ class TestGuest < MiniTest::Test
     assert_equal(expected, actual)
   end
 
+  def test_guest_favourite_song
+    expected = "Smells like teen spirit"
+    actual = @guest.guest_favourite_song
+    assert_equal(expected, actual)
+  end
 
 end

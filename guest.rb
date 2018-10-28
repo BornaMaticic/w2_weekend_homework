@@ -21,5 +21,8 @@ class Guest
     return "No funds."
   end
 
+def guest_favourite_song
+  return "Smells like teen spirit"
+  end
 
 end

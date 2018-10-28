@@ -59,4 +59,6 @@ class TestRoom < MiniTest::Test
     actual = @room2.number_of_guests_higher_than_room_capacity
     assert_equal(expected, actual)
   end
+
+
 end
